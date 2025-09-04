@@ -42,7 +42,7 @@ def build_glm_features(df: pd.DataFrame) -> pd.DataFrame:
     if "Region" in out:
         out["Region"] = out["Region"].astype("category")
         if "Centre" in list(out["Region"].cat.categories):
-            cats = ["R24"] + [c for c in out["Region"].cat.categories if c != "Centre"]
+            cats = ["Centre"] + [c for c in out["Region"].cat.categories if c != "Centre"]
             out["Region"] = out["Region"].cat.reorder_categories(cats, ordered=True)
 
     return out
