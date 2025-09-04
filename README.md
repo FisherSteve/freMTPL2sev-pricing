@@ -8,7 +8,7 @@
 
 ---
 
-## Methodischer Rahmen (knapp)
+## Methodischer Rahmen 
 
 - **Zielgröße:** Schaden-**Counts**; **Exposure** geht später als **Offset** in ein Poisson-GLM  
   $$
