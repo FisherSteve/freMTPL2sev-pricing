@@ -11,8 +11,12 @@
 ## Methodischer Rahmen 
 
 - **Zielgröße:** Schaden-**Counts**; **Exposure** geht später als **Offset** in ein Poisson-GLM  
-  $\log \mathbb{E}[\text{ClaimNb} \mid X] \;=\; \log(\text{Exposure}) + \eta(X)$
-- **Frequenz je Gruppe:** $\hat{\lambda}=\frac{\sum \text{ClaimNb}}{\sum \text{Exposure}}$ (exposure-gewichtet).  
+  $$
+  \log \mathbb{E}[\text{ClaimNb} \mid X] = \log(\text{Exposure}) + \eta(X)
+  $$
+  
+
+  - **Frequenz je Gruppe:** $\hat{\lambda}=\frac{\sum \text{ClaimNb}}{\sum \text{Exposure}}$ (exposure-gewichtet).  
   Kleine, laute Gruppen werden gefiltert: nur Zellen mit **≥ 100 Policy-Jahren**.
 - **Datenbereinigung (nach Schelldorfer & Wüthrich, 2019):**  
   `ClaimNb ≤ 4`, `Exposure ≤ 1`, `DrivAge ≤ 90`, `VehAge ≤ 40`.  
