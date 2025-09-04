@@ -11,9 +11,7 @@
 ## Methodischer Rahmen 
 
 - **Zielgröße:** Schaden-**Counts**; **Exposure** geht später als **Offset** in ein Poisson-GLM  
-  $$
-  \log \mathbb{E}[\text{ClaimNb} \mid X] = \log(\text{Exposure}) + \eta(X)
-  $$
+  $$\log \mathbb{E}[\text{ClaimNb} \mid X] = \log(\text{Exposure}) + \eta(X)$$
   
 
   - **Frequenz je Gruppe:** $\hat{\lambda}=\frac{\sum \text{ClaimNb}}{\sum \text{Exposure}}$ (exposure-gewichtet).  
