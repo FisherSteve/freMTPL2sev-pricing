@@ -8,6 +8,7 @@ def build_glm_features(df: pd.DataFrame) -> pd.DataFrame:
     # Area: als Kategorie (keine Integer-Codes als kontinuierliche Zahlen!)
     if "Area" in out:
         out["Area"] = out["Area"].astype("category")
+        out["AreaGLM"] = out["Area"].cat.codes.astype("int64") + 1
 
     # VehPowerGLM: cap bei 9, als Faktor
     if "VehPower" in out:
